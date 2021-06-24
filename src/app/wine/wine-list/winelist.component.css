@@ -1,0 +1,45 @@
+
+.searh-container {
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 17px;
+}
+
+.searh-container input{
+  font-size: 27px;
+}
+
+.wineitem-global-container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.form-global-container{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.interceptor{
+  margin-top: 30px;
+  height: 50vh;
+}
+
+.interceptor button{
+  margin: 25px 17px 5px 17px;
+  font-size: 25px;
+  padding: 5px 15px;
+}
+
+.interceptor button:hover{
+  background-color: #9ae1f3;
+  border: 1px solid black;
+}

@@ -1,0 +1,82 @@
+<div class="create-container">
+
+    <h1>New Wine</h1>
+
+    <div class="form-group">
+        <form [formGroup]="wineForm" (ngSubmit)="createWine()">
+
+            <div class="form-containers">
+                <div class="wine-name">
+                    <input type="text" placeholder="Wine Name Here" name="wineName" formControlName="name">
+                    <div *ngIf="name.invalid && (name.dirty ||name.touched )">
+                        <div class="error-message" *ngIf="name.errors.required">A name is required</div>
+                        <div class="error-message" *ngIf="name.errors.NameNotAllowed">
+                            Try on one of these:
+                        </div>
+                        <div class="error-message" *ngIf="name.errors.NameNotAllowed">
+                            Laya , K-Naina , Verdejo or Monastrell
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-containers">
+                <div class="wine-price">
+                    <input min="1" type="number" placeholder="Wine Price Here" formControlName="price">
+                    <div *ngIf="price.invalid && ( price.dirty || price.touched )">
+                        <div class="error-message" *ngIf="price.errors.required">
+                            Price is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-containers">
+                <div class="wine-url">
+                    <input type="text" placeholder="Image Url here" formControlName="imageUrl">
+
+                    <div *ngIf="url.invalid && (url.dirty || url.touched )">
+                        <div class="error-message" *ngIf="url.errors.required">
+                            A Url is required.
+                        </div>
+                        <div class="error-message" *ngIf="url.errors.required">
+                            Try this one:
+                        </div>
+                        <div class="error-message" *ngIf="url.errors.required">
+                            https://www.vinatis.es/54180-detail_default/lion-agiorgitiko-2018-giannikos-winery.png
+                        </div>
+
+                        <div class="error-message" *ngIf="url.errors.pattern">
+                            That's not a valid url
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--<div class="form-containers">
+                <div class="wine-food">
+                    <input type="text" placeholder="Suggested Food" name="foodPairing" formControlName="foodPairing">
+                </div>
+            </div>-->
+
+
+            <div class="onSale-confirm">
+                <input type="checkbox" name="onSale" formControlName="onSale">
+                This wine is on sale!
+            </div>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+
+    <div class="json-message">
+        <div class="json-message-inner">
+            <p>Form value:</p>
+            <p>{{ wineForm.value | json }}</p>
+        </div>
+    </div>
+
+
+</div>
