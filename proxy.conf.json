@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "https://github.com/jamieobeirne/wine-server.git",
+        "target": "https://wine-server-heroku.herokuapp.com/",
         "secure": false
     }
 }
