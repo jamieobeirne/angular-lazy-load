@@ -5,13 +5,19 @@ import { map } from 'rxjs/operators';
 
 import { UserStoreService } from './user-store.service';
 
-@Injectable()
+@Injectable(
+  {
+    providedIn: "root",
+  }
+)
 export class UserService {
+
+  private user_endpoint = "https://wine-server-heroku.herokuapp.com/api/user";
 
   constructor(private http: HttpClient, private userStore: UserStoreService) { }
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post('/api/user/login', {
+    return this.http.post(`${this.user_endpoint}/login`, {
       username: username,
       password: password
     }).pipe(map((resp: any) => {
@@ -21,7 +27,7 @@ export class UserService {
   }
 
   register(username: string, password: string): Observable<any> {
-    return this.http.post('/api/user/register', {
+    return this.http.post(`${this.user_endpoint}/register`, {
       username: username,
       password: password
     });

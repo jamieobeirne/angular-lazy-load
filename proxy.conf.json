@@ -1,6 +1,0 @@
-{
-    "/api": {
-        "target": "https://wine-server-heroku.herokuapp.com/",
-        "secure": false
-    }
-}
