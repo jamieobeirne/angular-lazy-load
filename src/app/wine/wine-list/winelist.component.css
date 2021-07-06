@@ -43,3 +43,11 @@
   background-color: #9ae1f3;
   border: 1px solid black;
 }
+
+@media only screen and (max-width: 600px) {
+ 
+
+  .searh-container input{
+    font-size: 25px;
+  }
+}

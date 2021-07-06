@@ -47,3 +47,21 @@
     background-color: rgb(140, 11, 190);
     color:white;
   }
+
+  @media only screen and (max-width: 500px) {
+
+    .wineitem-container{
+     
+      width: 200px;
+      min-height: 220px;
+    
+      font-size: 35px;
+      padding:15px 30px;
+      
+      margin-bottom: 75px;
+    }
+  
+    .wineitem-container img{
+      width: 200px;
+    }
+  }

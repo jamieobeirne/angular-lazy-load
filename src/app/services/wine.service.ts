@@ -47,7 +47,7 @@ export class WineService {
   }
 
   makeFailingCall() {
-    return this.http.get('/api/fail');
+    return this.http.get(this.wine_endpoint + 'fail');
   }
 
 }

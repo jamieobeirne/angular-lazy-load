@@ -1,6 +1,6 @@
-.spacer {
+/*.spacer {
     flex: 1;
-}
+}*/
 
 .toolbar {
     position: absolute;
@@ -10,18 +10,23 @@
     height: 120px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: rgb(194, 189, 189);
     color: white;
     font-weight: 600;
     font-size: 34px;
 }
 
+
+
 .winebottle-icon-header {
     margin: 0 12px 0 85px;
+    
 }
 
 .header-icons-right {
     margin-right: 82px;
+    
 }
 
 .header-icons-right svg {
@@ -70,3 +75,57 @@
 
 
 
+@media only screen and (max-width: 750px) {
+
+    .winebottle-icon-header {
+        margin: 0 12px 0 25px;
+        
+    }
+    
+    .header-icons-right {
+        margin-right: 22px
+       
+    }
+
+    .header-icons-right svg {
+        margin: 0 7px;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links span{
+        margin: 15px 0;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .toolbar {
+        font-size: 29px;
+    }
+
+    .magnifying-glass-shopping-small-screen{
+        width:30px;
+    }
+
+    .winebottle-icon-header {
+        margin: 0 8px 0 15px;
+        width:30px;
+    }
+    
+    .header-icons-right {
+        margin-right: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .toolbar {
+        font-size: 22px;
+    }
+}
