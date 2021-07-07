@@ -44,7 +44,7 @@ export class WineService {
 
   getWinesSearch(query: string): Observable<Wine[]> {
     console.log(query);
-    return this.http.get<Wine[]>(this.wine_endpoint + `?q=${query}`);
+    return this.http.get<Wine[]>(`https://wine-server-heroku.herokuapp.com/api/wine?q=${query}`);
   }
 
   makeFailingCall() {

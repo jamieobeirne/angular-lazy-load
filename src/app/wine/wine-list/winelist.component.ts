@@ -43,7 +43,6 @@ export class WinelistComponent implements OnInit {
 
 
   search() {
-
     this.searchTerms.next(this.searchString);
   }
 
