@@ -6,7 +6,7 @@ import { Wine } from '../models/Wine';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class StockLoadResolverService implements Resolve<Wine> {
+export class WineLoadResolverService implements Resolve<Wine> {
 
     constructor(private wineService: WineService) { }
 

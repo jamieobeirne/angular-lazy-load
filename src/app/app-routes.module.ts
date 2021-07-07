@@ -10,7 +10,7 @@ import { WineDetailComponent } from './wine/wine-detail/wine-detail.component';
 
 import { AuthGuard } from './guards/auth.guard';
 import { CreateStockDeactivateGuard } from './guards/wine-new-deactivate-guard.guard';
-import { StockLoadResolverService } from './guards/wine-load-resolver.service';
+import { WineLoadResolverService } from './guards/wine-load-resolver.service';
 
 
 const appRoutes: Routes = [

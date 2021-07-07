@@ -24,7 +24,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AuthGuard } from './guards/auth.guard';
 import { CreateStockDeactivateGuard } from './guards/wine-new-deactivate-guard.guard';
-import { StockLoadResolverService } from './guards/wine-load-resolver.service';
+import { WineLoadResolverService } from './guards/wine-load-resolver.service';
 import { UserModule } from './user/user.module';
 import { WineModule } from './wine/wine.module';
 import { RouterModule } from '@angular/router';
@@ -52,7 +52,7 @@ import { RouterModule } from '@angular/router';
     /*WineModule*/
   ],
 
-  providers: [WineService, UserService, UserStoreService, AuthService, AuthGuard, CreateStockDeactivateGuard, StockLoadResolverService,
+  providers: [WineService, UserService, UserStoreService, AuthService, AuthGuard, CreateStockDeactivateGuard, WineLoadResolverService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: WineAppInterceptor,

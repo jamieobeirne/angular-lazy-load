@@ -22,6 +22,36 @@ export class WineService {
   constructor(private http: HttpClient) { }
 
   getWine(id: string): Observable<Wine> {
+    return this.http.get<Wine>(`${this.wine_endpoint}/${id}`);
+  }
+
+  getWines(): Observable<Wine[]> {
+    console.log();
+    return this.http.get<Wine[]>(this.wine_endpoint);
+  }
+
+
+  changeQuantity(id: number, newQuantity: number): Observable<Wine> {
+    return this.http.patch<Wine>(`${this.wine_endpoint}/${id}`,
+      {
+        changeInQuantity: newQuantity
+      });
+  }
+
+  createWine(wine: Wine): Observable<any> {
+    return this.http.post<Wine>(this.wine_endpoint, wine);
+  }
+
+  getWinesSearch(query: string): Observable<Wine[]> {
+    console.log(query);
+    return this.http.get<Wine[]>(this.wine_endpoint + `?q=${query}`);
+  }
+
+  makeFailingCall() {
+    return this.http.get(this.wine_endpoint + 'fail');
+  }
+
+  /*getWine(id: string): Observable<Wine> {
     return this.http.get<Wine>(this.wine_endpoint + id)
   }
 
@@ -48,6 +78,8 @@ export class WineService {
 
   makeFailingCall() {
     return this.http.get(this.wine_endpoint + 'fail');
-  }
+  }*/
+
+
 
 }
